@@ -331,7 +331,7 @@ django-simple-history==3.0.0
     #   edx-enterprise
     #   edx-organizations
     #   ora2
-django-splash==1.1.0
+django-splash==1.0.0
     # via -r requirements/edx/base.in
 django-statici18n==2.0.1
     # via -r requirements/edx/base.in
@@ -340,7 +340,7 @@ django-storages==1.8
     #   -c requirements/edx/../constraints.txt
     #   -r requirements/edx/base.in
     #   edxval
-django-user-tasks==2.1.0
+django-user-tasks==2.0.3
     # via -r requirements/edx/base.in
 django-waffle==2.2.0
     # via
@@ -386,7 +386,7 @@ drf-jwt==1.19.0
     #   edx-drf-extensions
 drf-yasg==1.20.0
     # via edx-api-doc-tools
-edx-ace==1.1.1
+edx-ace==1.1.0
     # via -r requirements/edx/base.in
 edx-analytics-data-api-client==0.17.0
     # via -r requirements/edx/base.in
@@ -463,7 +463,7 @@ edx-proctoring==3.17.2
     #   edx-proctoring-proctortrack
 edx-proctoring-proctortrack==1.0.5
     # via -r requirements/edx/base.in
-edx-rbac==1.5.0
+edx-rbac==1.4.2
     # via edx-enterprise
 edx-rest-api-client==5.3.0
     # via
@@ -1054,7 +1054,7 @@ xblock-utils==2.1.3
     #   xblock-google-drive
 xmlsec==1.3.11
     # via python3-saml
-xss-utils==0.3.0
+xss-utils==0.2.0
     # via -r requirements/edx/base.in
 yarl==1.6.3
     # via aiohttp
