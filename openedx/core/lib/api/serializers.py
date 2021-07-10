@@ -53,9 +53,8 @@ class CourseKeyField(serializers.Field):
         """Convert unicode to a course key. """
         try:
             return CourseKey.from_string(data)
-        except InvalidKeyError as ex:
-            raise serializers.ValidationError(f"Invalid course key: {ex.msg}")  # lint-amnesty, pylint: disable=no-member
-
+        except InvalidKeyError as err:
+            raise serializers.ValidationError("Invalid course key") from err
 
 class UsageKeyField(serializers.Field):
     """ Serializer field for a model UsageKey field. """
@@ -68,5 +67,5 @@ class UsageKeyField(serializers.Field):
         """Convert unicode to a usage key. """
         try:
             return UsageKey.from_string(data)
-        except InvalidKeyError as ex:
-            raise serializers.ValidationError(f"Invalid usage key: {ex.msg}")  # lint-amnesty, pylint: disable=no-member
+        except InvalidKeyError as err:
+            raise serializers.ValidationError("Invalid course key") from err
