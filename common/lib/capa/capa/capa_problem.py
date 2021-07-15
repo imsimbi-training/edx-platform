@@ -188,6 +188,7 @@ class LoncapaProblem(object):
         if isinstance(problem_text, six.text_type):
             # etree chokes on Unicode XML with an encoding declaration
             problem_text = problem_text.encode('utf-8')
+        print('problem_test', problem_text)
         self.tree = etree.XML(problem_text)
 
         try:
@@ -656,6 +657,9 @@ class LoncapaProblem(object):
         Returns:
             a string with the human version of the response
         """
+        print("find_answer_text", answer_id, current_answer)
+        etree.ElementTree.dump(self.tree)
+
         if isinstance(current_answer, list):
             # Multiple answers. This case happens e.g. in multiple choice problems
             answer_text = ", ".join(
