@@ -658,7 +658,7 @@ class LoncapaProblem(object):
             a string with the human version of the response
         """
         print("find_answer_text", answer_id, current_answer)
-        etree.ElementTree.dump(self.tree)
+        print("tree", etree.tostring(self.tree))
 
         if isinstance(current_answer, list):
             # Multiple answers. This case happens e.g. in multiple choice problems
