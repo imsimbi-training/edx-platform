@@ -158,6 +158,8 @@ class LoncapaProblem(object):
 
         """
 
+        print('LoncapaProblem', state, seed, minimal_init, extract_tree)
+
         ## Initialize class variables from state
         self.do_reset()
         self.problem_id = id
