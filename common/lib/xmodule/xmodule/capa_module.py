@@ -464,7 +464,7 @@ class ProblemBlock(
                 # codejail, which makes the reports take much longer to run,
                 # and can also cause failures for CPU intensive instructor code
                 # in problems.
-                minimal_init=True,
+                # minimal_init=True,
                 # extract_tree=False allows us to work without a fully initialized CapaModule
                 # We'll still be able to find particular data in the XML when we need it
                 extract_tree=False,
