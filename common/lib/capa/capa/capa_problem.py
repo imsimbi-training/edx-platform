@@ -140,7 +140,7 @@ class LoncapaProblem(object):
 
         Arguments:
 
-            problem_text (string): xml defining the problem.
+            problem_text (string): xml dedofining the problem.
             id (string): identifier for this problem, often a filename (no spaces).
             capa_system (LoncapaSystem): LoncapaSystem instance which provides OS,
                 rendering, user context, and other resources.
@@ -158,7 +158,6 @@ class LoncapaProblem(object):
 
         """
 
-        print('LoncapaProblem', state, seed, minimal_init, extract_tree)
 
         ## Initialize class variables from state
         self.do_reset()
@@ -186,11 +185,12 @@ class LoncapaProblem(object):
         problem_text = re.sub(r"endouttext\s*/", "/text", problem_text)
         self.problem_text = problem_text
 
+        print('LoncapaProblem', state, seed, minimal_init, extract_tree)
         # parse problem XML file into an element tree
         if isinstance(problem_text, six.text_type):
             # etree chokes on Unicode XML with an encoding declaration
             problem_text = problem_text.encode('utf-8')
-        print('problem_test', problem_text)
+        print('problem_test:#', problem_text)
         self.tree = etree.XML(problem_text)
 
         try:
